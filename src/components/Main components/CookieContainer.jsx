@@ -28,7 +28,7 @@ export default function CookieContainer({cookies, setCookies, cps}) {
                     <p>Donuts/sec: {cps}</p>
                 </div>
             </div>
-            <img  className="rotate" onClick={() => setCookies(cookies + 1)}  src="./src/assets/donut(1).png" alt="" />
+            <img  className="rotate" onClick={() => setCookies(cookies + 1)}  src="https://cdn-icons-png.flaticon.com/128/2821/2821785.png" alt="" />
         </section>
     )
 }
