@@ -5,7 +5,7 @@ import CookieContainer from "./Main components/CookieContainer"
 export default function Main() {
     
     const [cookies, setCookies] = useState(100)
-    const [cps, setCps] = useState(0)
+    const [cps, setCps] = useState(1)
     
     return(
         <main>
@@ -16,7 +16,6 @@ export default function Main() {
 }
 
 /*GOALS
--Add cps to currentCount
 -Add local storage saves
 -Style top half of page
 -Create upgrades array with display

@@ -20,7 +20,7 @@ export default function ShopContainer({cookies, setCookies, cps, setCps}) {
             <h2>Shop</h2>
             {shopItem.map(item => (
             <div key={item.id} className="shopItem">
-                <BuyButton itemIncrease={item.increase} cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps}/>
+                <BuyButton itemIncrease={item.increase} cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps} cost={item.cost}/>
                 <p>{item.name}</p>
                 <p>{item.cost}</p>
                 <p>{item.increase}</p>
