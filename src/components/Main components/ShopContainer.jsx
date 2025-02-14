@@ -14,7 +14,7 @@ export default function ShopContainer({cookies, setCookies, cps, setCps}) {
 
         fetchShopData()
     }, [])
-
+    
     return (
         <section className="shopContainer">
             <h2>Shop</h2>

@@ -25,7 +25,7 @@ export default function CookieContainer({cookies, setCookies, cps}) {
                 <p>Donuts: {cookies + cps}</p>
                 <p>Donuts p/s: {cps}</p>
             </div>
-            <img  className="rotate" onClick={() => setCookies(cookies + 1)}  src="./src/assets/8bitdonut.png" alt="" />
+            <img  className="rotate" onClick={() => setCookies(cookies + 1)}  src="./src/assets/donut(1).png" alt="" />
         </section>
     )
 }

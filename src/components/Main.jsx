@@ -20,7 +20,6 @@ export default function Main() {
 
 /*GOALS
 -Style top half of page
--Create upgrades array with display
 -Other general styling and animation
 -Switch API to donut api
 -Add sound effects with controls
