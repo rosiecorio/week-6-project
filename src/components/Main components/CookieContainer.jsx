@@ -6,10 +6,17 @@ export default function CookieContainer({cookies, setCookies, cps}) {
         const cookieCounter = setInterval(() => {
             setCookies(currentCookies => currentCookies + cps)
         }, 1000)
+
+        localStorage.setItem('cps', JSON.stringify(cps))
+
         return () => {
             clearInterval(cookieCounter)
         }
     }, [cps])
+
+    useEffect(() => {
+        localStorage.setItem('cookies', JSON.stringify(cookies))
+    }, [cookies])
 
   
     return (

@@ -4,8 +4,11 @@ import CookieContainer from "./Main components/CookieContainer"
 
 export default function Main() {
     
-    const [cookies, setCookies] = useState(100)
-    const [cps, setCps] = useState(1)
+    const storedCps = parseInt(localStorage.getItem('cps'))
+    const storedCookies = parseInt(localStorage.getItem('cookies'))
+
+    const [cookies, setCookies] = useState(storedCookies || 100)
+    const [cps, setCps] = useState(storedCps || 1)
     
     return(
         <main>
@@ -16,7 +19,6 @@ export default function Main() {
 }
 
 /*GOALS
--Add local storage saves
 -Style top half of page
 -Create upgrades array with display
 -Other general styling and animation

@@ -23,7 +23,7 @@ export default function ShopContainer({cookies, setCookies, cps, setCps}) {
                 <BuyButton itemIncrease={item.increase} cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps} cost={item.cost}/>
                 <p>{item.name}</p>
                 <p>{item.cost}</p>
-                <p>{item.increase}</p>
+                <p className="hidden">{item.increase}</p>
             </div>
       ))}
         </section>

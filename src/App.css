@@ -49,7 +49,6 @@ main {
 
 .cookieContainer p {
     font-size: 20px;
-    font-weight: bold;
 }
 
 .rotate {
@@ -94,12 +93,16 @@ h2 {
     gap: 8px;
     align-items: center;
     height: 40px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .shopItem button {
     height: 25px;
     border-radius: 10px;
+}
+
+.hidden {
+    display: none;
 }
 
 .cookieContainer {
