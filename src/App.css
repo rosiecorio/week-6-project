@@ -80,7 +80,7 @@ h1 {
     gap: 10px;
     background-color: rgb(5, 4, 5);
     border-radius: 10px;
-    width: 30%;
+    width: auto;
     height: auto;
 }
 
@@ -89,7 +89,7 @@ h1 {
     width: 220px;
     border-radius: 10px;
     background-color: aliceblue;   
-    margin-top: 20px; 
+    margin: 20px; 
 }
 
 .upgradesButton:hover {
@@ -173,7 +173,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 23%;
+    height: 40%;
     width: 85%;
     overflow-y: scroll;
     background-color: rgb(243, 161, 194);
@@ -224,7 +224,7 @@ footer {
 
 /*START OF laptop MEDIA QUERY*/
 
-@media (min-width: 400px) {
+@media (min-width: 800px) {
 
     header {
         display: grid;
@@ -242,6 +242,10 @@ footer {
         grid-column: 3/4;
     }
 
+    .closeMenuButton {
+        top: 0;
+    }
+
     h1 {
         margin-bottom: 10px;;
     }
@@ -252,15 +256,19 @@ footer {
     }
     
     .shopContainer {
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        height: 90%;
         overflow-y: hidden;
         align-self: center;
         justify-self: center;
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+        margin-left: 100px;
     }
 
     img {
-        height: 60%;
+        height: 27em;
         margin: 0;
     }
 
@@ -291,9 +299,13 @@ footer {
         background-color: aliceblue;
         padding: 20px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         border: solid black 2px;
         border-radius: 10px;
+    }
+
+    .upgradeModalContainer p {
+        margin: 5px;
     }
     
     

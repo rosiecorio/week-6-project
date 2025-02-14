@@ -57,13 +57,13 @@ export default function MenuButton() {
                 <div className="modalContainer">
                     <h1 className="upgradesButton" onClick={toggleUpgrades}>Upgrades</h1>
                     {showUpgrades ? <div className="upgradeModalContainer">
-                        <p>{upgrades}</p>
+                        <div>{upgrades}</div>
                     </div> : ''}
                     <button className="closeMenuButton" onClick={toggleModal} >X</button>
                     <h1 className="upgradesButton">Audio</h1>
                     <h1 className="upgradesButton" onClick={toggleCredits}>Credits</h1>
                     {showCredits ? <div className="upgradeModalContainer">
-                        <p>{credits}</p>
+                        <div>{credits}</div>
                     </div> : ''}
                 </div>
             </section> : ''}
