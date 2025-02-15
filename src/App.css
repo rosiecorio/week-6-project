@@ -106,10 +106,10 @@ h1 {
     background-color: aliceblue;
     padding: 20px;
     justify-content: center;
-    border: solid white 2px;
+    border: solid rgb(0, 0, 0) 3px;
     border-radius: 10px;
     color: black;
-    background-color: rgb(181, 109, 174);
+    background-color: rgb(252, 251, 252);
 }
 
 .closeMenuButton {
@@ -199,6 +199,17 @@ h2 {
 .shopItem button {
     height: 25px;
     border-radius: 10px;
+    background-color: rgb(251, 225, 190);
+}
+
+.shopItem button:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 208, 250);
+}
+
+.shopItem button:active {
+    transform: scale(0.9);
+
 }
 
 .hidden {
@@ -256,7 +267,8 @@ footer {
     }
     
     .shopContainer {
-        width: 100%;
+        width: auto;
+        padding: 10px;
         height: 90%;
         overflow-y: hidden;
         align-self: center;

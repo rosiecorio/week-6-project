@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import BuyButton from "./BuyButton"
 
-export default function ShopContainer({cookies, setCookies, cps, setCps}) {
+export default function ShopContainer({cookies, setCookies, cps, setCps, bought, setBought}) {
 
     const [shopItem, setShopItem] = useState([])
 
@@ -20,7 +20,7 @@ export default function ShopContainer({cookies, setCookies, cps, setCps}) {
             <h2>Shop</h2>
             {shopItem.map(item => (
             <div key={item.id} className="shopItem">
-                <BuyButton itemIncrease={item.increase} cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps} cost={item.cost}/>
+                <BuyButton itemIncrease={item.increase} cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps} cost={item.cost} bought={bought} setBought={setBought}/>
                 <p>{item.name}</p>
                 <p>{item.cost}</p>
                 <p className="hidden">{item.increase}</p>

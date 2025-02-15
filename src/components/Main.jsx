@@ -2,7 +2,7 @@ import { useState } from "react"
 import ShopContainer from "./Main components/ShopContainer"
 import CookieContainer from "./Main components/CookieContainer"
 
-export default function Main() {
+export default function Main(bought, setBought) {
     
     const storedCps = parseInt(localStorage.getItem('cps'))
     const storedCookies = parseInt(localStorage.getItem('cookies'))
@@ -12,7 +12,7 @@ export default function Main() {
     
     return(
         <main>
-            <ShopContainer cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps}/>
+            <ShopContainer cookies={cookies} setCookies={setCookies} cps={cps} setCps={setCps} bought={bought} setBought={setBought}/>
             <CookieContainer cookies={cookies} setCookies={setCookies} cps={cps}/>
         </main>
     )

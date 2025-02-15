@@ -1,9 +1,9 @@
 import MenuButton from "./Header components/MenuButton"
 
-export default function Header() {
+export default function Header({bought}) {
     return (
         <header> 
-            <MenuButton />
+            <MenuButton bought={bought}/>
         </header>
     )
 }

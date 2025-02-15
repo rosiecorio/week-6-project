@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function MenuButton() {
+export default function MenuButton({bought}) {
     const [showModal, setShowModal] = useState(false)
     
     function toggleModal() {
@@ -34,7 +34,7 @@ export default function MenuButton() {
 
     const upgrades = upgradesArray.map((upgrade) => {
         return (
-       <p key={upgrade}>{upgrade}s bought:</p>
+       <p key={upgrade}>{upgrade}s bought: {bought}</p>
     )
         
     })
