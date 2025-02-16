@@ -13,6 +13,12 @@ export default function MenuButton({bought}) {
         setShowUpgrades(!showUpgrades)
     }
 
+    const [showAudio, setShowAudio] = useState(false)
+
+    function toggleAudio() {
+        setShowAudio(!showAudio)
+    }
+
     const [showCredits, setShowCredits] = useState(false)
 
     function toggleCredits() {
@@ -35,8 +41,19 @@ export default function MenuButton({bought}) {
     const upgrades = upgradesArray.map((upgrade) => {
         return (
        <p key={upgrade}>{upgrade}s bought: {bought}</p>
-    )
-        
+    )    
+    })
+
+    const audioArray = [
+        "Play",
+        "Pause",
+        "Stop"
+    ]
+
+    const audio = audioArray.map((item) => {
+        return (
+            <button key={item}>{item}</button>
+        )
     })
 
     const creditsArray = [
@@ -60,11 +77,10 @@ export default function MenuButton({bought}) {
                         <div>{upgrades}</div>
                     </div> : ''}
                     <button className="closeMenuButton" onClick={toggleModal} >X</button>
-                    <h1 className="upgradesButton">Audio</h1>
+                    <h1 className="upgradesButton" onClick={toggleAudio}>Audio</h1>
+                    {showAudio ? <div className="upgradeModalContainer audioControls">{audio}</div> : ''}
                     <h1 className="upgradesButton" onClick={toggleCredits}>Credits</h1>
-                    {showCredits ? <div className="upgradeModalContainer">
-                        <div>{credits}</div>
-                    </div> : ''}
+                    {showCredits ? <div className="upgradeModalContainer">{credits}</div> : ''}
                 </div>
             </section> : ''}
         </>
